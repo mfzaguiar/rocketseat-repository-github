@@ -31,6 +31,7 @@ export const Form = styled.form`
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 16px;
+    border-color: ${props => props.error && 'red'};
   }
 `;
 

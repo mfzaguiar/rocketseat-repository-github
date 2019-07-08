@@ -44,7 +44,7 @@ export const Owner = styled.header`
 
 export const IssueList = styled.div`
   padding-top: 30px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-top: 1px solid #eee;
   list-style: none;
 
@@ -99,5 +99,60 @@ export const IssueList = styled.div`
         color: #999;
       }
     }
+  }
+`;
+
+export const ContainerButtons = styled.div`
+  margin-top: 15px;
+  display: flex;
+
+  button {
+    background: #7159c1;
+    border: 0;
+    padding: 5px;
+    color: #fff;
+
+    & + button {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+`;
+
+export const Pagination = styled.div`
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const PrevButton = styled.button.attrs(props => ({
+  disabled: props.pgDisable,
+}))`
+  background: #7159c1;
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+`;
+
+export const ProxButton = styled.button`
+  background: #7159c1;
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  &:hover {
+    opacity: 0.9;
   }
 `;
